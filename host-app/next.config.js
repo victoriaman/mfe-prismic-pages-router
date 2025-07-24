@@ -1,6 +1,8 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 
 const isProd = process.env.NODE_ENV === 'production';
+const prodPath = '/mfe-prismic-pages-router/host-app';
+
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -9,9 +11,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  basePath: isProd ? '/mfe-prismic-pages-router/host-app' : '',
-  assetPrefix: isProd ? '/mfe-prismic-pages-router/host-app' : '',
+  basePath: isProd ? prodPath : '',
+  assetPrefix: isProd ? prodPath : '',
   output: 'export', // 👈 important for static export
+  publicRuntimeConfig: {
+    basePath: isProd ? prodPath : '', // 👈 available at runtime
+  },
   images: {
     unoptimized: true, // ✅ disable image optimization for static export
   },

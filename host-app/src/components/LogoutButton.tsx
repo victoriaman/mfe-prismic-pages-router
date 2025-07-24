@@ -1,4 +1,8 @@
 import clsx from "clsx";
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+const basePath = publicRuntimeConfig.basePath || '';
 
 type LogoutButtonProps = {
   className?: string,
@@ -10,7 +14,7 @@ export default function LogoutButton({
 }: LogoutButtonProps) {
   const handleLogout = async () => {
     await fetch("/api/logout"); // clears cookie + redirects
-    window.location.href = "/login";
+    window.location.href = `${basePath}/login`;
   };
 
   return (
