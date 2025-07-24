@@ -1,0 +1,1 @@
+{"sharedModules":[],"federatedModules":[{"remote":"adminMFE","entry":"/mfe-prismic-pages-router/remote-app/_next/static/runtime/remoteEntry.js","sharedModules":[],"exposes":{"./Header":["static/chunks/__federation_expose_Header.27a9725460d25cca.js"]},"remoteModules":{}}]}

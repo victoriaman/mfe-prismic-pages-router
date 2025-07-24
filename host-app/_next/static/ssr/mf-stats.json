@@ -1,0 +1,87 @@
+{
+  "id": "hostApp",
+  "name": "hostApp",
+  "metaData": {
+    "name": "hostApp",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "host-app"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "commonjs-module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "hostApp",
+    "pluginVersion": "0.16.0",
+    "prefetchInterface": false,
+    "publicPath": "/mfe-prismic-pages-router/host-app/_next/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^18.2.0",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.2.0",
+      "eager": false,
+      "id": "hostApp:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "961.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.2.0",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.2.0",
+      "eager": false,
+      "id": "hostApp:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "540-1fbd51fa3805ad06.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "adminMFE",
+      "consumingFederationContainerName": "hostApp",
+      "federationContainerName": "adminMFE",
+      "moduleName": "Header",
+      "usedIn": [
+        "src/pages/index.tsx",
+        "src/pages/login.tsx"
+      ],
+      "entry": "https://victoriaman.github.io/mfe-prismic-pages-router/remote-app/_next/static/runtime/remoteEntry.js"
+    }
+  ],
+  "exposes": []
+}

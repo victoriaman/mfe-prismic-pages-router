@@ -1,0 +1,99 @@
+{
+  "id": "adminMFE",
+  "name": "adminMFE",
+  "metaData": {
+    "name": "adminMFE",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "remote-app"
+    },
+    "remoteEntry": {
+      "name": "static/runtime/remoteEntry.js",
+      "path": "",
+      "type": "window"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "adminMFE",
+    "pluginVersion": "0.16.0",
+    "prefetchInterface": false,
+    "publicPath": "/mfe-prismic-pages-router/remote-app/_next/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^18.2.0",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.2.0",
+      "eager": false,
+      "id": "adminMFE:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/chunks/framework-e7d68c50a9f45b70.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.2.0",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.2.0",
+      "eager": false,
+      "id": "adminMFE:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/chunks/framework-e7d68c50a9f45b70.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./Header"
+      ]
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./Header",
+      "id": "adminMFE:Header",
+      "name": "Header",
+      "requires": [
+        "react"
+      ],
+      "file": "src/components/Header",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/chunks/__federation_expose_Header.27a9725460d25cca.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

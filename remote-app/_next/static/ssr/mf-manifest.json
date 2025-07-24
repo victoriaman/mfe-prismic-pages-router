@@ -1,0 +1,68 @@
+{
+  "id": "adminMFE",
+  "name": "adminMFE",
+  "metaData": {
+    "name": "adminMFE",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "remote-app"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "commonjs-module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "adminMFE",
+    "pluginVersion": "0.16.0",
+    "prefetchInterface": false,
+    "publicPath": "/mfe-prismic-pages-router/remote-app/_next/"
+  },
+  "shared": [
+    {
+      "id": "adminMFE:react",
+      "name": "react",
+      "version": "18.2.0",
+      "singleton": true,
+      "requiredVersion": "^18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "540-40a9f673f1f3d34c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "adminMFE:Header",
+      "name": "Header",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Header-1376c6786bc4fe83.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./Header"
+    }
+  ]
+}
