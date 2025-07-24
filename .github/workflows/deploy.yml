@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install root deps (if any)
+        run: npm install
+
       - name: Build host-app
         working-directory: host-app
         run: |
@@ -32,6 +35,13 @@ jobs:
           npm install
           npm run build
 
+      - name: Combine exports to `public-combined`
+        run: |
+          mkdir -p public-combined/host-app
+          mkdir -p public-combined/remote-app
+          cp -r host-app/out/* public-combined/host-app/
+          cp -r remote-app/out/* public-combined/remote-app/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -40,9 +50,3 @@ jobs:
           force_orphan: true
         env:
           NODE_ENV: production
-
-      - name: Combine exports to `public-combined`
-        run: |
-          mkdir public-combined
-          cp -r host-app/out public-combined/host-app
-          cp -r remote-app/out public-combined/remote-app
