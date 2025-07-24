@@ -1,0 +1,51 @@
+name: Deploy host and remote apps to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install root deps (if any)
+        run: npm install
+
+      - name: Build host-app
+        working-directory: host-app
+        run: |
+          npm install
+          npm run build
+
+      - name: Build remote-app
+        working-directory: remote-app
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public-combined
+          force_orphan: true
+        env:
+          NODE_ENV: production
+
+      - name: Combine exports to `public-combined`
+        run: |
+          mkdir public-combined
+          cp -r host-app/out public-combined/host-app
+          cp -r remote-app/out public-combined/remote-app
