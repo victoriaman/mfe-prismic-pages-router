@@ -20,9 +20,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install root deps (if any)
-        run: npm install
-
       - name: Build host-app
         working-directory: host-app
         run: |
